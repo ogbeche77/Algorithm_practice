@@ -33,7 +33,12 @@ const string2 ="[[{([[({})]])}]"
 
 function check(string) {
     const arr = string.split('') // returns array of individual string
+    const stack = new Stack()
 
+    for(let i=0; i<arr.length; i++) {
+        const currentElem = arr[i] // gives us access to the splited array
+        
+    }
 
 
 

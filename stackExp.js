@@ -8,6 +8,19 @@ this.push = function(value) {
     this.count++;
 }
 
+//Remove & returns value at the end of stack
+this.pop = function(){
+    if(this.count === 0){
+        return undefined;
 
+    }
+    this.count--;
+    var result = this.storage[this.count];
+    delete this.storage[this.count];
+    return result;
+}
+this.size = function(){
+    return this.count
+}
 
 }

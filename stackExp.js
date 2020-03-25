@@ -19,8 +19,13 @@ this.pop = function(){
     delete this.storage[this.count];
     return result;
 }
-this.size = function(){
-    return this.count
+this.size = function() {
+    return this.count;
+}
+
+//Returns the value at the end of stack
+this.peek = function(value) {
+    return this.storage[this.count-1];
 }
 
 }

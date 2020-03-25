@@ -37,7 +37,24 @@ function check(string) {
 
     for(let i=0; i<arr.length; i++) {
         const currentElem = arr[i] // gives us access to the splited array
-        
+        if(currentElem === "[" || currentElem === "{" || currentElem ==="("){
+            stack.push(currentElem)
+        } else{
+            if(stack.size()=== 0){  //the next block won't execute if stack.size === 0
+                return false
+            }
+            const lastElem = stack.peek()
+            if(lastElem ==="[" && currentElem === "]") {
+                //ok
+            } else if (lastElem ==="{" && currentElem === "}"){
+                //ok
+            } else if (lastElem ==="(" && currentElem === ")"){
+                //ok
+            } else{
+                //not ok
+                return false
+            }
+        }
     }
 
 

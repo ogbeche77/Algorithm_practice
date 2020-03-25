@@ -1,4 +1,4 @@
-/*class Stack extends Array {
+class Stack extends Array {
     constructor(...elems){ 
         super(...elems)  //super represent array
     }
@@ -18,16 +18,14 @@
 
 }
 
-const s = new Stack(1,2,3)
+/*const s = new Stack(1,2,3)
 s.push(100)
 
-console.log(s.peek()) */
+console.log(s.peek()) /*
 
-/* Check of the following strings are correctly allign */
+/* Check if the following strings are correctly allign */
 
-class Stack extends Array{
 
-}
 const string1 ="[[{([[({})]])}]]"
 const string2 ="[[{([[({})]])}]"
 
@@ -40,10 +38,12 @@ function check(string) {
         if(currentElem === "[" || currentElem === "{" || currentElem ==="("){
             stack.push(currentElem)
         } else{
-            if(stack.size()=== 0){  //the next block won't execute if stack.size === 0
-                return false
+            if(stack.size() === 0){  //the next block won't execute if stack.size === 0
+            console.log("Failed at 1")   
+            return false
             }
             const lastElem = stack.peek()
+            stack.pop()
             if(lastElem ==="[" && currentElem === "]") {
                 //ok
             } else if (lastElem ==="{" && currentElem === "}"){
@@ -52,11 +52,17 @@ function check(string) {
                 //ok
             } else{
                 //not ok
+                console.log("Failed at 2") 
                 return false
             }
-        }
+        }   
     }
 
-
-
+    if(stack.size() !==0) {
+        return false
+    }
+    return true
+    
 }
+console.log(check(string1))
+console.log(check(string2))

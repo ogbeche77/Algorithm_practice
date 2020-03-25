@@ -18,3 +18,7 @@ if(rword === word){
 else{
     console.log(word + "is not a palindrome");
 }
+
+//others stack operations are 
+isFull(); /* To check if stack is full */
+isEmpty(); /* To check if stack is empty */

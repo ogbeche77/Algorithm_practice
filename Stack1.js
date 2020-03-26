@@ -59,10 +59,11 @@ function check(string) {
     }
 
     if(stack.size() !==0) {
+        console.log("Failed at 3") 
         return false
     }
     return true
     
 }
-console.log(check(string1))
-console.log(check(string2))
+console.log(check(string1));
+console.log(check(string2));

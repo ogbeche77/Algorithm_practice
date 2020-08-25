@@ -4,7 +4,7 @@ class Stack extends Array {
     }
 
     pop(){
-        if(this.length === 0) throw new Error("Nothng here to pop mehn")
+        if(this.length === 0) throw new Error("Nothing here to pop mehn")
         super.pop()
     } 
 
